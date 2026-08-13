@@ -2,34 +2,31 @@
 using namespace std;
 
 int main() {
-    double c1, c2, c3, promedio;
+    double nota1 = 0, nota2 = 0, nota3 = 0;
+    double resultado = 0;
 
-    cout << "Ingrese la primera calificacion:"<< endl;
-    cin >> c1;
-    cout << "Ingrese la segunda calificacion:"<< endl;
-    cin >> c2;
-    cout << "Ingrese la tercera calificacion:"<< endl;
-    cin >> c3;
+    cout << "Escribe la calificacion 1: ";
+    cin >> nota1;
+    cout << "Escribe la calificacion 2: ";
+    cin >> nota2;
+    cout << "Escribe la calificacion 3: ";
+    cin >> nota3;
 
-    promedio = (c1 + c2 + c3) / 3;
+    resultado = (nota1 + nota2 + nota3) / 3;
 
-    cout << "El promedio es: " << promedio << endl;
-    
-   if (promedio>=9){
-    cout << "Excelente" << endl;
-   } 
-   else if (promedio>=8){
-    cout << "Muy bien" << endl;
-   }  
-   else if (promedio>=7){
-    cout << "Bien" << endl;   
-  } 
-  else if (promedio>=6){
-    cout << "Suficiente" << endl;
-  }
-  else{
-    cout << "Reprobado" <<endl;
-  }
- 
+    cout << "\nTu resultado final es: " << resultado << endl;
+
+    if (resultado < 6) {
+        cout << "Estatus: No alcanzaste el minimo" << endl;
+    } else if (resultado < 7) {
+        cout << "Estatus: Aprobado apenas" << endl;
+    } else if (resultado < 8) {
+        cout << "Estatus: Buen rendimiento" << endl;
+    } else if (resultado < 9) {
+        cout << "Estatus: Muy buen trabajo" << endl;
+    } else {
+        cout << "Estatus: Desempeño sobresaliente" << endl;
+    }
+
     return 0;
 }
